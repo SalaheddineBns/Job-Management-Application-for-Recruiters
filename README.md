@@ -1,4 +1,4 @@
-# Job
+# Job Management App
 ## Installing Libraries
 Run "cd client"=> "npm install"
 ## Setting Database Connection
