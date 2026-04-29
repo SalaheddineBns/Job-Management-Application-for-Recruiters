@@ -12,14 +12,11 @@ const Landing = () => {
         <div className='container page'>
          <div className='info'>
           <h1>
-            join <span>Compulog</span> App
+            join <span>Opportune</span> App
           </h1>
           <p>
-          I'm baby sriracha deep v jianbing tote bag actually tbh,
-           aesthetic art party fingerstache hot chicken fanny pack 
-           tattooed disrupt.
-            VHS truffaut thundercats hella, 
-            edison bulb paleo roof party brunch wayfarers
+        Find, manage, and track job opportunities — all in one place.
+Opprtune is a smart job management platform designed for recruiters and hiring teams to post offers, review applications, and hire faster.
           </p>
           <Link to='/register' className='btn btn-hero'>
             Login/Register
