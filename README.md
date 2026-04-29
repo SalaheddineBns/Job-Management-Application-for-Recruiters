@@ -10,6 +10,23 @@ This application serves as a platform for generating and disseminating job oppor
 - **Visual representations and summaries**: Quickly grasp trends and activities of recent job postings.
 - **Secure authentication system**: Users can securely authenticate and update personal details and credentials within the system.
 
+
+## 🌐 Live Demo
+
+The application is deployed and available here:
+👉 [Opprtune — Job Management App](https://job-management-application-for-recr-nine.vercel.app/)
+
+### 🔑 Test Credentials
+
+Don't want to register? Use the demo account below:
+
+| Field    | Value              |
+|----------|--------------------|
+| Email    | testUser@gmail.com |
+| Password | testUser@1         |
+
+
+
 ## Advanced Topics Used
 
 ### Front-End
@@ -40,19 +57,39 @@ This application serves as a platform for generating and disseminating job oppor
   - `mongoose` (Database API for MongoDB)
   - `validator` (for checking user inputs)
 
-## Installing Libraries
 
-Navigate to the client directory and install the necessary packages:
+
+## 🚀 Run the Application
+
+### 1. Install dependencies
+
+From the root directory, install all packages:
+
 ```bash
-cd client
+# Install backend dependencies
 npm install
 
-## Setting Database Connection
-Create a file named .env and add the connection String of database, Port Listening ,JWT_SECRET AND JWT_LIFETIME:
-- PORT=""
-- MONGO_URL=""
-- JWT_SECRET=""
-- JWT_LIFETIME=1d
-## Run Application 
-- npm start
+# Install frontend dependencies
+cd client && npm install
+```
 
+### 2. Set up environment variables
+
+Create a `.env` file at the root of the project and add the following:
+
+```dotenv
+PORT=5000
+MONGO_URL="mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/dbName?retryWrites=true&w=majority"
+JWT_SECRET="your_secret_key"
+JWT_LIFETIME=1d
+```
+
+> 💡 Generate a secure JWT_SECRET with: `openssl rand -base64 32` or from an online website
+
+### 3. Start the application
+
+```bash
+npm start
+```
+
+The app will be available at `http://localhost:3000`
