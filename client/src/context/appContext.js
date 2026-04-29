@@ -77,10 +77,9 @@ const AppContext = React.createContext()
 const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
     //axios 
-    const authFetch = axios.create({
-        baseURL: '/api/v1/',
-
-    })
+   const authFetch = axios.create({
+    baseURL: `${process.env.REACT_APP_API_URL || ''}/api/v1`,
+})
     //request 
     authFetch.interceptors.request.use((config) => {
         config.headers.common['Authorization'] = `Bearer ${state.token}`
@@ -163,7 +162,7 @@ const AppProvider = ({ children }) => {
     const setupUser = async ({ currentUser, endPoint, alertText }) => {
         dispatch({ type: SETUP_USER_BEGIN })
         try {
-            const { data } = await axios.post(`/api/v1/auth/${endPoint}`, currentUser)
+            const { data } = await authFetch.post(`auth/${endPoint}`, currentUser)
 
             const { user, token, location } = data
             dispatch({
