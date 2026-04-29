@@ -66,4 +66,11 @@ const start=async()=>{
         console.log(error)
     }
 }
-start()
+
+//  Local dev
+if(process.env.NODE_ENV !== 'production') {
+    start()
+}
+
+// Vercel needs this export
+export default app
